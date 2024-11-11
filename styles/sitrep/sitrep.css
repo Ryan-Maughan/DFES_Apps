@@ -1,0 +1,57 @@
+	
+	div[page-id=sitrep]  table{
+		width:100%;
+	}
+	
+	div[page-id=sitrep]  table td{
+		width:50%;
+		overflow:hidden;
+		vertical-align:top;
+	}
+	
+	div[page-id=sitrep]  div.input{
+		padding:5px;
+		overflow:hidden;
+	}
+	
+	div[page-id=sitrep]  div.input > input[type=text],
+	div[page-id=sitrep]  div.input > input[type=tel],
+	div[page-id=sitrep]  div.input > textarea,
+	div[page-id=sitrep]  div.input > select,
+	div[page-id=sitrep]  div.input > div.btn-group{
+		display:block;
+		margin-top:5px;
+	}
+	
+	div[page-id=sitrep] div.input > div.input-group{
+		margin-top:5px
+	}
+	
+	div[page-id=sitrep]  td.title {
+		padding:5px;
+		font-weight:bold;
+		padding-bottom:10px;
+	}
+	
+	div[page-id=sitrep]  td.title hr{
+		margin:7px 0;
+	}
+	
+	@media all and (max-width:620px){
+		div[page-id=sitrep]  table td{
+			display:block;
+			width:100%
+		}
+	}
+	
+	div.sitrep{
+		margin:10px;
+		padding:10px;
+		border:2px solid red;
+		background:#f5f5f5;
+	}
+	
+	div.sitrep hr{
+		margin:10px 0;
+		border-top-color:#ccc
+	}

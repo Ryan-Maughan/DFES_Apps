@@ -1,0 +1,150 @@
+<link href="./styles/sitrep/sitrep.css" rel="stylesheet">
+<script src="./scripts/sitrep/sitrep.js" defer></script>
+
+<div page-id="sitrep" class="page">
+	<h3>Bushfire SITREP / PAFTAC</h3>
+	<form onsubmit="return false">
+		<table>
+			<tr>
+				<td>
+					<div class="input">
+						<span>Incident Name</span>
+						<input class="form-control" type="text" name="incident_name">
+					</div>
+					<div class="input">
+						<span>Incident Address</span>
+						<input class="form-control" type="text" name="incident_address">
+					</div>
+				</td>
+				<td></td>
+			</tr>
+			<tr><td colspan="2" class="title"><hr>Critical Information</td></tr>
+			<tr>
+				<td>
+					<div class="input">
+						<span>Fuel Type</span>
+						<select class="form-control" name="fuel">
+							<option></option>
+							<option>Forest (other)</option>
+							<option>Grassland</option>
+							<option>Jarrah</option>
+							<option>Karri</option>
+							<option>Mallee/Mulga</option>
+							<option>Rainforest</option>
+							<option>Scrub</option>
+							<option>Shrubland</option>
+							<option>Woodland</option>
+						</select>
+					</div>
+					<div class="input">
+						<span>Fire Location</span>
+						<input class="form-control" type="text" name="location" placeholder="East of Tonkin Highway, North of Armadale Road">
+					</div>
+				</td>
+				<td>
+					<div class="input">
+						<span>Direction of Travel</span>
+						<div style="padding-top:5px">
+							<div style="display:inline-block">
+								<div class="btn-group">
+									<button class="btn btn-default">North<input type="radio" name="direction_ns" value="North"></button>
+									<button class="btn btn-default">South<input type="radio" name="direction_ns" value="South"></button>
+								</div>
+							</div>
+							<div style="display:inline-block;margin-left:0px">
+								<div class="btn-group" style="overflow:hidden;margin-left:5px">
+									<button class="btn btn-default">East<input type="radio" name="direction_ew" value="East"></button>
+									<button class="btn btn-default">West<input type="radio" name="direction_ew" value="West"></button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="input">
+						<span>Topography</span>
+						<div class="btn-group">
+							<button class="btn btn-default">Uphill<input type="radio" name="topography" value="Uphill"></button>
+							<button class="btn btn-default">Downhill<input type="radio" name="topography" value="Downhill"></button>
+							<button class="btn btn-default">Flat Land<input type="radio" name="topography" value="Flat Land"></button>
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<div class="input">
+						<span>Heading Towards</span>
+						<textarea class="form-control" rows="6" name="infrastructure" placeholder="Schools&#10;Buildings&#10;Houses&#10;High Voltage Power Lines&#10;Major Highways"></textarea>
+					</div>
+				</td>
+			</tr>
+			<tr><td colspan="2" class="title"><hr>Fire Conditions</td></tr>
+			<tr>
+				<td>
+					<div class="input">
+						<span>Fire Size</span>
+						<div style="padding-top:5px">
+							<input class="form-control" type="tel" name="size_width" placeholder="100" style="width:120px;display:inline-block"> metres wide x
+							<input class="form-control" type="tel" name="size_length" placeholder="100" style="width:120px;display:inline-block"> metres long
+						</div>
+					</div>
+					<div class="input">
+						<span>Flame Intensity</span>
+						<div class="btn-group">
+							<button class="btn btn-default">Low<input type="radio" name="intensity" value="Low" data-class="btn-success"></button>
+							<button class="btn btn-default">Moderate<input type="radio" name="intensity" value="Moderate" data-class="btn-warning"></button>
+							<button class="btn btn-default">High<input type="radio" name="intensity" value="High" data-class="btn-danger"></button>
+						</div>
+					</div>
+					<div class="input">
+						<span>Flame Height</span>
+						<div style="padding-top:5px">
+							<input class="form-control" type="tel" name="flame_height" placeholder="1.5" style="width:120px;display:inline-block"> metres
+						</div>
+					</div>
+				</td>
+				<td>
+					<div class="input">
+						<span>Wind Speed</span>
+						<div style="padding-top:5px">
+							<input class="form-control" type="tel" name="wind_speed" placeholder="35" style="width:120px;display:inline-block"> km/h
+						</div>
+					</div>
+					<div class="input">
+						<span>Spotting</span>
+						<div style="padding-top:5px">
+							<input class="form-control" type="text" name="spotting" placeholder="200-300m" style="width:120px;display:inline-block"> in front of head fire
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr><td colspan="2" class="title"><hr>Infrastructure</td></tr>
+			<tr>
+				<td colspan="2">
+					<div class="input">
+						<span>Properties Under Threat</span>
+						<div class="btn-group">
+							<button class="btn btn-default">Now<input type="radio" name="under_threat" value="Now" data-class="btn-danger"></button>
+							<button class="btn btn-default">30 minutes<input type="radio" name="under_threat" value="30 minutes" data-class="btn-warning"></button>
+							<button class="btn btn-default">1 hour<input type="radio" name="under_threat" value="1 hour" data-class="btn-primary"></button>
+							<button class="btn btn-default">2 hours+<input type="radio" name="under_threat" value="2 hours+" data-class="btn-info"></button>
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<hr><div class="sitrep">Pending...</div><hr>
+				</td>
+			</tr>
+			<tbody class="footer">
+				<tr>
+					<td colspan="2" style="padding:5px">
+						<button class="btn btn-success send" data-method="email">Send as Email</button>
+						<button class="btn btn-primary send" data-method="sms">Send as SMS</button>
+						<input type="reset" class="btn btn-default pull-right">
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</form>
+</div>

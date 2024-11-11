@@ -1,0 +1,251 @@
+
+	/* Main Display Styles */
+	
+	:focus,:active{
+		outline:none!important;
+		outline-style:none!important;
+		-moz-outline-style:none!important
+	}
+	
+	body{
+		background:#f5f5f5;
+		overflow-y:scroll;
+		font-family:-apple-system, -apple-system-font, "Segoe UI", Helvetica, Arial, sans-serif
+	}
+	
+	h3{
+		margin:20px;
+	}
+	
+	p:last-child{
+		margin-bottom:0
+	}
+	
+	header{
+		position:fixed;
+		background:#08427c;
+		color:white;
+		left:0;
+		right:0;
+		z-index:100;
+		height:50px;
+		overflow:hidden;
+	}
+	
+	header #menu{
+		cursor:pointer;
+		float:left;
+		line-height:50px;
+		height:50px;
+		width:50px;
+		font-size:33px;
+		text-align:center;
+		border-right:1px solid white;
+	}
+	
+	header h4{
+		margin:0;
+		text-align:center;
+		line-height:50px;
+	}
+	
+	div#sidebar{
+		top:50px;
+		bottom:0;
+		width:260px;
+		position:fixed;
+		box-sizing:content-box;
+		z-index:1031;
+		overflow-y:auto;
+		transition:transform 300ms ease;
+		-webkit-overflow-scrolling:touch;
+		-webkit-transition:-webkit-transform 300ms ease;
+		-webkit-backface-visibility:hidden;
+		left:-261px;
+		background:#283340;
+		color:white;
+		font-size:12px;
+	}
+	
+	div#sidebar.open {
+		transform:translate3d(261px,0,0);
+		-webkit-transform:translate3d(261px,0,0)
+	}
+	
+	div#sidebar div.logos{
+		padding:20px 0 10px;
+		text-align:center;
+	}
+	
+	div#sidebar div.logos img{
+		display:inline-block;
+		height:30px;
+	}
+	
+	#sidebar ul {margin:0; padding:0 1px 0 0}
+	#sidebar li a {cursor:pointer; display:block; padding-left:12px; color:#fff; text-decoration:none; line-height:35px; font-size:13px}
+	
+	#sidebar li a i.material-icons {font-size:16px; margin-right:25px;margin-top:10px;display:block;float:left}
+	
+	#sidebar li.active > a,
+	#sidebar li:active > a {background:rgba(0,0,0,.2) !important}
+	#sidebar li:hover > a {background:rgba(0,0,0,.1)}
+	
+	#sidebar li.title {height:0; border-top:1px solid #535c66; margin:20px 0 15px; position:relative; color:rgba(255,255,255,.5)}
+	#sidebar li.title span {position:absolute; top:-8px; left:10px; font-size:11px; background:#283340; text-transform:uppercase; padding:0 5px}
+	
+	#sidebar li ul{display:none}
+	#sidebar li.active ul{display:block; padding-left:40px; list-style: none; margin-bottom:15px;}
+	
+	@media only screen and (min-width:1024px){
+		header {left:260px; padding-left:0}
+		header #menu {display:none}
+		#content {margin-left:260px}
+		#sidebar {z-index:5 !important; left:0 !important; top:0 !important}
+	}
+	
+	div#content{
+		padding-top:50px;
+	}
+	
+	div#content h3{
+		color:#08427c;
+		font-size:20px;
+		margin:5px 5px 10px;
+		padding-bottom:10px;
+		border-bottom:1px dotted #bbb;
+	}
+	
+	div#pages > div{
+		display:none;
+		border:1px solid #ccc;
+		background:white;
+		overflow:hidden;
+		padding:10px;
+	}
+	
+	div#pages > div.active{
+		display:block;
+	}
+	
+	div#opacity {
+		background:#000;
+		position:fixed;
+		top:50px;
+		right:0;
+		left:0;
+		bottom:0;
+		z-index:1030;
+		opacity:0;
+		transition:opacity 300ms ease;
+		-webkit-transition:opacity 300ms ease
+	}
+	
+	div.sticky-footer-body{
+		min-height: 100%;
+		margin-bottom:-60px;
+	}
+	
+	div.sticky-footer-body:after {
+		content: "";
+		display: block;
+	}
+	div.sticky-footer-body:after {
+		height: 60px;
+	}
+	
+	div.sticky-footer{
+		border-top:1px solid #535c66;
+		color:rgba(255,255,255,.3);
+		text-align:center;
+		height:50px;
+		padding:10px 0;
+		margin-top:10px;
+		font-size:11px;
+	}
+	
+	div.margin{
+		margin:0 auto;
+		padding:10px;
+		max-width:1020px;
+	}
+	
+	ul.nav-tabs{
+		font-weight:bold;
+	}
+	
+	ul.nav-tabs.main li{
+		max-width:25%;
+	}
+	
+	ul.nav-tabs li a{
+		padding: 10px;
+		margin-right:0;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space:nowrap;
+	}
+	
+	div.tab-content{
+		background:white;
+		border:1px solid #ddd;
+		border-top:0;
+	}
+
+	div.tab-pane{
+		overflow:hidden;
+		padding:10px;
+	}
+	
+	div.btn-group input{
+		display:none;
+	}
+	
+	div.tooltip-inner{
+		text-align:left;
+		max-width:310px;
+		padding:8px;
+	}
+	
+	div.tooltip-inner ol{
+		padding-left:20px;
+		margin:0;
+	}
+	
+	button.help{
+		margin-left:10px;
+		font-weight:bold;
+	}
+	
+	input[readonly]{
+		background: repeating-linear-gradient(
+		  -45deg,
+		  #eaeaea,
+		  #eaeaea 2px,
+		  #fff 2px,
+		  #fff 4px
+		);
+	}
+	
+	input[rating="red"]{
+		border:2px solid #f00;
+	}
+	input[rating="orange"]{
+		border:2px solid #ffc000;
+	}
+	input[rating="yellow"]{
+		border:2px solid #ff0;
+	}
+	input[rating="green"]{
+		border:2px solid #00b050;
+	}
+	input[rating="blue"]{
+		border:2px solid #00b0f0;
+	}
+	
+	/* */
+	
+	.update{
+		margin-top:10px;
+		display:none;
+	}
